@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Codex Access</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        width: 260px;
+        margin: 0;
+        padding: 16px;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        background: #f5f5f5;
+      }
+      .container {
+        width: 100%;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 18px;
+      }
+      #logo {
+        display: block;
+        margin: 0 auto 12px;
+        width: 40px;
+        height: auto;
+        filter: grayscale(1) brightness(0.8);
+        transition: filter 0.2s ease, transform 0.2s ease;
+      }
+      #logo.active {
+        filter: grayscale(0) drop-shadow(0 0 8px #28a745);
+        transform: scale(1.05);
+      }
+      p {
+        margin: 0 0 16px;
+        line-height: 1.4;
+      }
+      .status {
+        font-size: 13px;
+        color: #444;
+        margin-bottom: 16px;
+        min-height: 18px;
+      }
+      .status.error {
+        color: #c00;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+      }
+      button {
+        flex: 1;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #888;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      button.toggle {
+        border-color: #0069d9;
+        background: #007bff;
+        color: white;
+      }
+      button.toggle.inactive {
+        border-color: #888;
+        background: #fff;
+        color: #222;
+      }
+      .instructions {
+        margin-top: 12px;
+        font-size: 12px;
+        color: #222;
+      }
+      .instructions-row {
+        display: flex;
+        gap: 6px;
+        margin-top: 4px;
+      }
+      .instructions input {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        padding: 6px 10px;
+        font-size: 11px;
+        font-family: monospace;
+        margin-top: 4px;
+        background: #f7f7f7;
+      }
+      .instructions-row button {
+        border-radius: 6px;
+        border: 1px solid #888;
+        background: #fff;
+        cursor: pointer;
+        padding: 6px 10px;
+        font-size: 11px;
+        font-family: system-ui, sans-serif;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img id="logo" src="hello_extensions.png" alt="Codex logo" />
+      <h1>Codex Browser Bridge</h1>
+      <p>Do you want to give Codex access to this browser tab?</p>
+      <p id="status" class="status">Codex will be able to access, control, and do anything on this tab once you grant access.</p>
+      <div class="actions">
+        <button class="toggle" id="toggle-access">Enable</button>
+      </div>
+      <div id="instructions" class="instructions" hidden>
+        <p>Give this command to Codex:</p>
+        <div class="instructions-row">
+          <input type="text" id="codex-command" readonly />
+          <button id="copy-command" title="Copy curl command">Copy</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

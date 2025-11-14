@@ -1,0 +1,25 @@
+{
+  "name": "Codex Browser Bridge",
+  "description": "Enable OpenAI Codex CLI to control your web browser.",
+  "version": "0.0.0.1",
+  "homepage_url": "https://github.com/loltek/codex-browser-bridge",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "debugger",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  }
+}
