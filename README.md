@@ -36,22 +36,6 @@ todo write a better usage section.
 
 Together they enable Codex to request a human to load the extension, grant access on any tab, and then send commands with `curl` while polling for responses.
 
-## Server
-
-- **Tech stack:** PHP 8+, SQLite. Configuration lives in `server/src/www/api3.php`, while the `db.db3` file lives one directory above `src/www` to keep it out of the web root.
-- **Endpoints:**
-  - `task=create_session` – returns a random session key.
-  - `task=<command>` (`execute_javascript`, `click_on_element`, `mouse_click_position`, `take_screenshot`, `keyboard_input`) – stores a command payload for the extension to pick up. Requests must be `multipart/form-data`.
-  - `task=fetch_command` – polled by the extension.
-  - `task=send_response` – extension posts execution results.
-  - `task=fetch_response` – Codex polls to read the results (JSON for text, base64 data URLs for screenshots).
-  - `task=session_instructions` (or no task) – returns human-readable instructions plus helper URLs.
-  
-## Extension
-
-- **Location:** `extension/src/`
-
-- **Background worker:** Polls `fetch_command`, executes trusted actions via the debugger API, and posts results to `send_response`. Keep-alive ports plus periodic pings keep the MV3 worker awake while a session is active.
 
 ## Contributing
 
