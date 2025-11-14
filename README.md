@@ -10,7 +10,7 @@ git clone 'https://github.com/loltek/codex-browser-bridge.git' --depth 1
 ```
 then in chrome go to `chrome://extensions/` and make sure `Developer Mode` is enabled,
 then press `Load unpacked extension`,navigate to codex-browser-bridge/extension/src and pick it:
-![install image illustration](https://private-user-images.githubusercontent.com/1874996/514504366-e76e5b24-cc85-45fd-a859-1280ab53b23a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMxMzY4MjMsIm5iZiI6MTc2MzEzNjUyMywicGF0aCI6Ii8xODc0OTk2LzUxNDUwNDM2Ni1lNzZlNWIyNC1jYzg1LTQ1ZmQtYTg1OS0xMjgwYWI1M2IyM2EucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MTExNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTExMTRUMTYwODQzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YTc0ZjdlMmY2YmMwODc3M2YxZDIwMDBjNzVjYTdkYTdmNTlkMTYzZWU2YzQ0NGJmZWRhMTQ1NzQ5OGNjOGY2MiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.mtL-eTIuCt0HFiqRyjEW79Kb64vrc5UBekLb9P1umSk
+![install image illustration](/extension/images/install-illustration.png
  "install title")
 
 
@@ -18,6 +18,8 @@ then press `Load unpacked extension`,navigate to codex-browser-bridge/extension/
 ## Usage
 
 it's trivial, find the extension box and press "give access to codex" and follow the instructions.
+
+![usage illustration](/extension/images/usage-illustration.png "usage illustration")
 
 todo write a better usage section. 
 
